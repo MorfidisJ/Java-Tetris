@@ -115,71 +115,67 @@ flowchart TD
 ### Piece Types and Rotations
 ```mermaid
 graph TD
-    %% Main Pieces
-    I[I-Piece<br/>Cyan] --> I1[0°<br/>****]
-    I --> I2[90°<br/>*<br/>*<br/>*<br/>*]
-    I --> I3[180°<br/>****]
-    I --> I4[270°<br/>*<br/>*<br/>*<br/>*]
+    %% I-Piece
+    I[I-Piece<br/>Cyan] --> I1[0°<br/>⬛⬛⬛⬛]
+    I --> I2[90°<br/>⬛<br/>⬛<br/>⬛<br/>⬛]
+    I --> I3[180°<br/>⬛⬛⬛⬛]
+    I --> I4[270°<br/>⬛<br/>⬛<br/>⬛<br/>⬛]
 
-    J[J-Piece<br/>Blue] --> J1[0°<br/>*<br/>***]
-    J --> J2[90°<br/>**<br/>*<br/>*]
-    J --> J3[180°<br/>***<br/>  *]
-    J --> J4[270°<br/> *<br/> *<br/>**]
+    %% J-Piece
+    J[J-Piece<br/>Blue] --> J1[0°<br/>⬛<br/>⬛⬛⬛]
+    J --> J2[90°<br/>⬛⬛<br/>⬛<br/>⬛]
+    J --> J3[180°<br/>⬛⬛⬛<br/>  ⬛]
+    J --> J4[270°<br/> ⬛<br/> ⬛<br/>⬛⬛]
 
-    L[L-Piece<br/>Orange] --> L1[0°<br/>  *<br/>***]
-    L --> L2[90°<br/>*<br/>*<br/>**]
-    L --> L3[180°<br/>***<br/>*]
-    L --> L4[270°<br/>**<br/> *<br/> *]
+    %% L-Piece
+    L[L-Piece<br/>Orange] --> L1[0°<br/>  ⬛<br/>⬛⬛⬛]
+    L --> L2[90°<br/>⬛<br/>⬛<br/>⬛⬛]
+    L --> L3[180°<br/>⬛⬛⬛<br/>⬛]
+    L --> L4[270°<br/>⬛⬛<br/> ⬛<br/> ⬛]
 
-    O[O-Piece<br/>Yellow] --> O1[0°<br/>**<br/>**]
-    O --> O2[90°<br/>**<br/>**]
-    O --> O3[180°<br/>**<br/>**]
-    O --> O4[270°<br/>**<br/>**]
+    %% O-Piece
+    O[O-Piece<br/>Yellow] --> O1[0°<br/>⬛⬛<br/>⬛⬛]
+    O --> O2[90°<br/>⬛⬛<br/>⬛⬛]
+    O --> O3[180°<br/>⬛⬛<br/>⬛⬛]
+    O --> O4[270°<br/>⬛⬛<br/>⬛⬛]
 
-    S[S-Piece<br/>Green] --> S1[0°<br/> **<br/>**]
-    S --> S2[90°<br/>*<br/>**<br/> *]
-    S --> S3[180°<br/> **<br/>**]
-    S --> S4[270°<br/>*<br/>**<br/> *]
+    %% S-Piece
+    S[S-Piece<br/>Green] --> S1[0°<br/> ⬛⬛<br/>⬛⬛]
+    S --> S2[90°<br/>⬛<br/>⬛⬛<br/> ⬛]
+    S --> S3[180°<br/> ⬛⬛<br/>⬛⬛]
+    S --> S4[270°<br/>⬛<br/>⬛⬛<br/> ⬛]
 
-    T[T-Piece<br/>Purple] --> T1[0°<br/> *<br/>***]
-    T --> T2[90°<br/>*<br/>**<br/>*]
-    T --> T3[180°<br/>***<br/> *]
-    T --> T4[270°<br/> *<br/>**<br/> *]
+    %% T-Piece
+    T[T-Piece<br/>Purple] --> T1[0°<br/> ⬛<br/>⬛⬛⬛]
+    T --> T2[90°<br/>⬛<br/>⬛⬛<br/>⬛]
+    T --> T3[180°<br/>⬛⬛⬛<br/> ⬛]
+    T --> T4[270°<br/> ⬛<br/>⬛⬛<br/> ⬛]
 
-    Z[Z-Piece<br/>Red] --> Z1[0°<br/>**<br/> **]
-    Z --> Z2[90°<br/> *<br/>**<br/>*]
-    Z --> Z3[180°<br/>**<br/> **]
-    Z --> Z4[270°<br/> *<br/>**<br/>*]
-
-    %% Properties
-    P[Properties] --> P1[I: 4x1]
-    P --> P2[J: 3x2]
-    P --> P3[L: 3x2]
-    P --> P4[O: 2x2]
-    P --> P5[S: 3x2]
-    P --> P6[T: 3x2]
-    P --> P7[Z: 3x2]
-
-    %% Spawn Points
-    S1[Spawn] --> S2[I: (3,0)]
-    S1 --> S3[J: (3,0)]
-    S1 --> S4[L: (3,0)]
-    S1 --> S5[O: (4,0)]
-    S1 --> S6[S: (3,0)]
-    S1 --> S7[T: (3,0)]
-    S1 --> S8[Z: (3,0)]
+    %% Z-Piece
+    Z[Z-Piece<br/>Red] --> Z1[0°<br/>⬛⬛<br/> ⬛⬛]
+    Z --> Z2[90°<br/> ⬛<br/>⬛⬛<br/>⬛]
+    Z --> Z3[180°<br/>⬛⬛<br/> ⬛⬛]
+    Z --> Z4[270°<br/> ⬛<br/>⬛⬛<br/>⬛]
 
     %% Styles
-    classDef piece fill:#f9f,stroke:#333,stroke-width:2px
-    classDef rotation fill:#bbf,stroke:#333,stroke-width:1px
-    classDef property fill:#bfb,stroke:#333,stroke-width:1px
-    classDef spawn fill:#fbb,stroke:#333,stroke-width:1px
+    classDef iPiece fill:#00FFFF,stroke:#000,stroke-width:2px,color:#000
+    classDef jPiece fill:#0000FF,stroke:#000,stroke-width:2px,color:#fff
+    classDef lPiece fill:#FFA500,stroke:#000,stroke-width:2px,color:#000
+    classDef oPiece fill:#FFFF00,stroke:#000,stroke-width:2px,color:#000
+    classDef sPiece fill:#00FF00,stroke:#000,stroke-width:2px,color:#000
+    classDef tPiece fill:#800080,stroke:#000,stroke-width:2px,color:#fff
+    classDef zPiece fill:#FF0000,stroke:#000,stroke-width:2px,color:#fff
+    classDef rotation fill:#f0f0f0,stroke:#000,stroke-width:1px,color:#000,font-family:monospace
 
     %% Apply styles
-    class I,J,L,O,S,T,Z piece
+    class I iPiece
+    class J jPiece
+    class L lPiece
+    class O oPiece
+    class S sPiece
+    class T tPiece
+    class Z zPiece
     class I1,I2,I3,I4,J1,J2,J3,J4,L1,L2,L3,L4,O1,O2,O3,O4,S1,S2,S3,S4,T1,T2,T3,T4,Z1,Z2,Z3,Z4 rotation
-    class P,P1,P2,P3,P4,P5,P6,P7 property
-    class S1,S2,S3,S4,S5,S6,S7,S8 spawn
 ```
 
 ### Piece Statistics
