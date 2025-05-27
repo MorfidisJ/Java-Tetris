@@ -115,67 +115,61 @@ flowchart TD
 ### Piece Types and Rotations
 ```mermaid
 graph TD
-    %% I-Piece Rotations
+    %% Main Pieces
     I[I-Piece<br/>Cyan] --> I1[0°<br/>****]
     I --> I2[90°<br/>*<br/>*<br/>*<br/>*]
     I --> I3[180°<br/>****]
     I --> I4[270°<br/>*<br/>*<br/>*<br/>*]
 
-    %% J-Piece Rotations
     J[J-Piece<br/>Blue] --> J1[0°<br/>*<br/>***]
     J --> J2[90°<br/>**<br/>*<br/>*]
     J --> J3[180°<br/>***<br/>  *]
     J --> J4[270°<br/> *<br/> *<br/>**]
 
-    %% L-Piece Rotations
     L[L-Piece<br/>Orange] --> L1[0°<br/>  *<br/>***]
     L --> L2[90°<br/>*<br/>*<br/>**]
     L --> L3[180°<br/>***<br/>*]
     L --> L4[270°<br/>**<br/> *<br/> *]
 
-    %% O-Piece Rotations
     O[O-Piece<br/>Yellow] --> O1[0°<br/>**<br/>**]
     O --> O2[90°<br/>**<br/>**]
     O --> O3[180°<br/>**<br/>**]
     O --> O4[270°<br/>**<br/>**]
 
-    %% S-Piece Rotations
     S[S-Piece<br/>Green] --> S1[0°<br/> **<br/>**]
     S --> S2[90°<br/>*<br/>**<br/> *]
     S --> S3[180°<br/> **<br/>**]
     S --> S4[270°<br/>*<br/>**<br/> *]
 
-    %% T-Piece Rotations
     T[T-Piece<br/>Purple] --> T1[0°<br/> *<br/>***]
     T --> T2[90°<br/>*<br/>**<br/>*]
     T --> T3[180°<br/>***<br/> *]
     T --> T4[270°<br/> *<br/>**<br/> *]
 
-    %% Z-Piece Rotations
     Z[Z-Piece<br/>Red] --> Z1[0°<br/>**<br/> **]
     Z --> Z2[90°<br/> *<br/>**<br/>*]
     Z --> Z3[180°<br/>**<br/> **]
     Z --> Z4[270°<br/> *<br/>**<br/>*]
 
-    %% Piece Properties
-    Props[Piece Properties] --- IProps[I: 4x1]
-    Props --- JProps[J: 3x2]
-    Props --- LProps[L: 3x2]
-    Props --- OProps[O: 2x2]
-    Props --- SProps[S: 3x2]
-    Props --- TProps[T: 3x2]
-    Props --- ZProps[Z: 3x2]
+    %% Properties
+    P[Properties] --> P1[I: 4x1]
+    P --> P2[J: 3x2]
+    P --> P3[L: 3x2]
+    P --> P4[O: 2x2]
+    P --> P5[S: 3x2]
+    P --> P6[T: 3x2]
+    P --> P7[Z: 3x2]
 
-    %% Spawn Positions
-    Spawn[Spawn Points] --- ISpawn[I: (3,0)]
-    Spawn --- JSpawn[J: (3,0)]
-    Spawn --- LSpawn[L: (3,0)]
-    Spawn --- OSpawn[O: (4,0)]
-    Spawn --- SSpawn[S: (3,0)]
-    Spawn --- TSpawn[T: (3,0)]
-    Spawn --- ZSpawn[Z: (3,0)]
+    %% Spawn Points
+    S1[Spawn] --> S2[I: (3,0)]
+    S1 --> S3[J: (3,0)]
+    S1 --> S4[L: (3,0)]
+    S1 --> S5[O: (4,0)]
+    S1 --> S6[S: (3,0)]
+    S1 --> S7[T: (3,0)]
+    S1 --> S8[Z: (3,0)]
 
-    %% Style definitions
+    %% Styles
     classDef piece fill:#f9f,stroke:#333,stroke-width:2px
     classDef rotation fill:#bbf,stroke:#333,stroke-width:1px
     classDef property fill:#bfb,stroke:#333,stroke-width:1px
@@ -184,8 +178,8 @@ graph TD
     %% Apply styles
     class I,J,L,O,S,T,Z piece
     class I1,I2,I3,I4,J1,J2,J3,J4,L1,L2,L3,L4,O1,O2,O3,O4,S1,S2,S3,S4,T1,T2,T3,T4,Z1,Z2,Z3,Z4 rotation
-    class Props,IProps,JProps,LProps,OProps,SProps,TProps,ZProps property
-    class Spawn,ISpawn,JSpawn,LSpawn,OSpawn,SSpawn,TSpawn,ZSpawn spawn
+    class P,P1,P2,P3,P4,P5,P6,P7 property
+    class S1,S2,S3,S4,S5,S6,S7,S8 spawn
 ```
 
 ### Piece Statistics
