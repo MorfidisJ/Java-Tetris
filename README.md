@@ -1,4 +1,5 @@
 # Java Tetris Game
+Created by Ioannis Morfidis
 
 ## Overview
 This is a modern implementation of the classic Tetris game using Java Swing. The game features a clean, modern UI with smooth animations and all the standard Tetris mechanics including piece holding, ghost pieces, and scoring system.
@@ -111,17 +112,95 @@ flowchart TD
     N -->|No| D
 ```
 
-### Piece Types
+### Piece Types and Rotations
 ```mermaid
-graph LR
-    I[Tetromino I] --> |Cyan| IShape[****]
-    J[Tetromino J] --> |Blue| JShape[*<br/>***]
-    L[Tetromino L] --> |Orange| LShape[  *<br/>***]
-    O[Tetromino O] --> |Yellow| OShape[**<br/>**]
-    S[Tetromino S] --> |Green| SShape[ **<br/>**]
-    T[Tetromino T] --> |Purple| TShape[ *<br/>***]
-    Z[Tetromino Z] --> |Red| ZShape[**<br/> **]
+graph TD
+    subgraph "Tetromino Types & Rotations"
+        direction TB
+        
+        subgraph "I-Piece (Cyan)"
+            I[I-Piece] --> I1[Rotation 0°<br/>****]
+            I --> I2[Rotation 90°<br/>*<br/>*<br/>*<br/>*]
+            I --> I3[Rotation 180°<br/>****]
+            I --> I4[Rotation 270°<br/>*<br/>*<br/>*<br/>*]
+        end
+
+        subgraph "J-Piece (Blue)"
+            J[J-Piece] --> J1[Rotation 0°<br/>*<br/>***]
+            J --> J2[Rotation 90°<br/>**<br/>*<br/>*]
+            J --> J3[Rotation 180°<br/>***<br/>  *]
+            J --> J4[Rotation 270°<br/> *<br/> *<br/>**]
+        end
+
+        subgraph "L-Piece (Orange)"
+            L[L-Piece] --> L1[Rotation 0°<br/>  *<br/>***]
+            L --> L2[Rotation 90°<br/>*<br/>*<br/>**]
+            L --> L3[Rotation 180°<br/>***<br/>*]
+            L --> L4[Rotation 270°<br/>**<br/> *<br/> *]
+        end
+
+        subgraph "O-Piece (Yellow)"
+            O[O-Piece] --> O1[Rotation 0°<br/>**<br/>**]
+            O --> O2[Rotation 90°<br/>**<br/>**]
+            O --> O3[Rotation 180°<br/>**<br/>**]
+            O --> O4[Rotation 270°<br/>**<br/>**]
+        end
+
+        subgraph "S-Piece (Green)"
+            S[S-Piece] --> S1[Rotation 0°<br/> **<br/>**]
+            S --> S2[Rotation 90°<br/>*<br/>**<br/> *]
+            S --> S3[Rotation 180°<br/> **<br/>**]
+            S --> S4[Rotation 270°<br/>*<br/>**<br/> *]
+        end
+
+        subgraph "T-Piece (Purple)"
+            T[T-Piece] --> T1[Rotation 0°<br/> *<br/>***]
+            T --> T2[Rotation 90°<br/>*<br/>**<br/>*]
+            T --> T3[Rotation 180°<br/>***<br/> *]
+            T --> T4[Rotation 270°<br/> *<br/>**<br/> *]
+        end
+
+        subgraph "Z-Piece (Red)"
+            Z[Z-Piece] --> Z1[Rotation 0°<br/>**<br/> **]
+            Z --> Z2[Rotation 90°<br/> *<br/>**<br/>*]
+            Z --> Z3[Rotation 180°<br/>**<br/> **]
+            Z --> Z4[Rotation 270°<br/> *<br/>**<br/>*]
+        end
+    end
+
+    subgraph "Piece Properties"
+        direction LR
+        P[Properties] --> P1[I-Piece: 4x1]
+        P --> P2[J-Piece: 3x2]
+        P --> P3[L-Piece: 3x2]
+        P --> P4[O-Piece: 2x2]
+        P --> P5[S-Piece: 3x2]
+        P --> P6[T-Piece: 3x2]
+        P --> P7[Z-Piece: 3x2]
+    end
+
+    subgraph "Spawn Positions"
+        direction LR
+        SP[Spawn] --> SP1[I: (3,0)]
+        SP --> SP2[J: (3,0)]
+        SP --> SP3[L: (3,0)]
+        SP --> SP4[O: (4,0)]
+        SP --> SP5[S: (3,0)]
+        SP --> SP6[T: (3,0)]
+        SP --> SP7[Z: (3,0)]
+    end
 ```
+
+### Piece Statistics
+| Piece | Color | Size | Rotations | Spawn Point | Wall Kicks |
+|-------|-------|------|-----------|-------------|------------|
+| I     | Cyan  | 4x1  | 2         | (3,0)       | 5          |
+| J     | Blue  | 3x2  | 4         | (3,0)       | 4          |
+| L     | Orange| 3x2  | 4         | (3,0)       | 4          |
+| O     | Yellow| 2x2  | 1         | (4,0)       | 1          |
+| S     | Green | 3x2  | 2         | (3,0)       | 4          |
+| T     | Purple| 3x2  | 4         | (3,0)       | 4          |
+| Z     | Red   | 3x2  | 2         | (3,0)       | 4          |
 
 ## Technical Details
 
@@ -167,11 +246,12 @@ java Tetris
 - Mobile port
 
 ## Credits
-- Game Design & Implementation: John Morfidis
+- Game Design & Implementation: Ioannis Morfidis
 - Original Tetris Concept: Alexey Pajitnov
 - Java Swing Framework: Oracle Corporation
 
+## License
+This project is open source and available under the MIT License.
 
 ---
-## Author
-John Morfidis 
+*Created by Ioannis Morfidis* 
