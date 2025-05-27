@@ -167,12 +167,10 @@ java Tetris
 - Mobile port
 
 ## Credits
-- Game Design & Implementation: Ioannis Morfidis
+- Game Design & Implementation: John Morfidis
 - Original Tetris Concept: Alexey Pajitnov
 - Java Swing Framework: Oracle Corporation
 
-## License
-This project is open source and available under the MIT License.
 
 ---
 ## Author
