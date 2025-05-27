@@ -1,5 +1,4 @@
 # Java Tetris Game
-Created by Ioannis Morfidis
 
 ## Overview
 This is a modern implementation of the classic Tetris game using Java Swing. The game features a clean, modern UI with smooth animations and all the standard Tetris mechanics including piece holding, ghost pieces, and scoring system.
@@ -176,4 +175,5 @@ java Tetris
 This project is open source and available under the MIT License.
 
 ---
-*Created by Ioannis Morfidis* 
+##Author
+John Morfidis 
