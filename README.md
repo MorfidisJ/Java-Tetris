@@ -1,5 +1,5 @@
 # Java Tetris Game
-Created by Ioannis Morfidis
+
 
 ## Overview
 This is a modern implementation of the classic Tetris game using Java Swing. The game features a clean, modern UI with smooth animations and all the standard Tetris mechanics including piece holding, ghost pieces, and scoring system.
@@ -115,80 +115,77 @@ flowchart TD
 ### Piece Types and Rotations
 ```mermaid
 graph TD
-    subgraph "Tetromino Types & Rotations"
-        direction TB
-        
-        subgraph "I-Piece (Cyan)"
-            I[I-Piece] --> I1[Rotation 0°<br/>****]
-            I --> I2[Rotation 90°<br/>*<br/>*<br/>*<br/>*]
-            I --> I3[Rotation 180°<br/>****]
-            I --> I4[Rotation 270°<br/>*<br/>*<br/>*<br/>*]
-        end
+    %% I-Piece Rotations
+    I[I-Piece<br/>Cyan] --> I1[0°<br/>****]
+    I --> I2[90°<br/>*<br/>*<br/>*<br/>*]
+    I --> I3[180°<br/>****]
+    I --> I4[270°<br/>*<br/>*<br/>*<br/>*]
 
-        subgraph "J-Piece (Blue)"
-            J[J-Piece] --> J1[Rotation 0°<br/>*<br/>***]
-            J --> J2[Rotation 90°<br/>**<br/>*<br/>*]
-            J --> J3[Rotation 180°<br/>***<br/>  *]
-            J --> J4[Rotation 270°<br/> *<br/> *<br/>**]
-        end
+    %% J-Piece Rotations
+    J[J-Piece<br/>Blue] --> J1[0°<br/>*<br/>***]
+    J --> J2[90°<br/>**<br/>*<br/>*]
+    J --> J3[180°<br/>***<br/>  *]
+    J --> J4[270°<br/> *<br/> *<br/>**]
 
-        subgraph "L-Piece (Orange)"
-            L[L-Piece] --> L1[Rotation 0°<br/>  *<br/>***]
-            L --> L2[Rotation 90°<br/>*<br/>*<br/>**]
-            L --> L3[Rotation 180°<br/>***<br/>*]
-            L --> L4[Rotation 270°<br/>**<br/> *<br/> *]
-        end
+    %% L-Piece Rotations
+    L[L-Piece<br/>Orange] --> L1[0°<br/>  *<br/>***]
+    L --> L2[90°<br/>*<br/>*<br/>**]
+    L --> L3[180°<br/>***<br/>*]
+    L --> L4[270°<br/>**<br/> *<br/> *]
 
-        subgraph "O-Piece (Yellow)"
-            O[O-Piece] --> O1[Rotation 0°<br/>**<br/>**]
-            O --> O2[Rotation 90°<br/>**<br/>**]
-            O --> O3[Rotation 180°<br/>**<br/>**]
-            O --> O4[Rotation 270°<br/>**<br/>**]
-        end
+    %% O-Piece Rotations
+    O[O-Piece<br/>Yellow] --> O1[0°<br/>**<br/>**]
+    O --> O2[90°<br/>**<br/>**]
+    O --> O3[180°<br/>**<br/>**]
+    O --> O4[270°<br/>**<br/>**]
 
-        subgraph "S-Piece (Green)"
-            S[S-Piece] --> S1[Rotation 0°<br/> **<br/>**]
-            S --> S2[Rotation 90°<br/>*<br/>**<br/> *]
-            S --> S3[Rotation 180°<br/> **<br/>**]
-            S --> S4[Rotation 270°<br/>*<br/>**<br/> *]
-        end
+    %% S-Piece Rotations
+    S[S-Piece<br/>Green] --> S1[0°<br/> **<br/>**]
+    S --> S2[90°<br/>*<br/>**<br/> *]
+    S --> S3[180°<br/> **<br/>**]
+    S --> S4[270°<br/>*<br/>**<br/> *]
 
-        subgraph "T-Piece (Purple)"
-            T[T-Piece] --> T1[Rotation 0°<br/> *<br/>***]
-            T --> T2[Rotation 90°<br/>*<br/>**<br/>*]
-            T --> T3[Rotation 180°<br/>***<br/> *]
-            T --> T4[Rotation 270°<br/> *<br/>**<br/> *]
-        end
+    %% T-Piece Rotations
+    T[T-Piece<br/>Purple] --> T1[0°<br/> *<br/>***]
+    T --> T2[90°<br/>*<br/>**<br/>*]
+    T --> T3[180°<br/>***<br/> *]
+    T --> T4[270°<br/> *<br/>**<br/> *]
 
-        subgraph "Z-Piece (Red)"
-            Z[Z-Piece] --> Z1[Rotation 0°<br/>**<br/> **]
-            Z --> Z2[Rotation 90°<br/> *<br/>**<br/>*]
-            Z --> Z3[Rotation 180°<br/>**<br/> **]
-            Z --> Z4[Rotation 270°<br/> *<br/>**<br/>*]
-        end
-    end
+    %% Z-Piece Rotations
+    Z[Z-Piece<br/>Red] --> Z1[0°<br/>**<br/> **]
+    Z --> Z2[90°<br/> *<br/>**<br/>*]
+    Z --> Z3[180°<br/>**<br/> **]
+    Z --> Z4[270°<br/> *<br/>**<br/>*]
 
-    subgraph "Piece Properties"
-        direction LR
-        P[Properties] --> P1[I-Piece: 4x1]
-        P --> P2[J-Piece: 3x2]
-        P --> P3[L-Piece: 3x2]
-        P --> P4[O-Piece: 2x2]
-        P --> P5[S-Piece: 3x2]
-        P --> P6[T-Piece: 3x2]
-        P --> P7[Z-Piece: 3x2]
-    end
+    %% Piece Properties
+    Props[Piece Properties] --- IProps[I: 4x1]
+    Props --- JProps[J: 3x2]
+    Props --- LProps[L: 3x2]
+    Props --- OProps[O: 2x2]
+    Props --- SProps[S: 3x2]
+    Props --- TProps[T: 3x2]
+    Props --- ZProps[Z: 3x2]
 
-    subgraph "Spawn Positions"
-        direction LR
-        SP[Spawn] --> SP1[I: (3,0)]
-        SP --> SP2[J: (3,0)]
-        SP --> SP3[L: (3,0)]
-        SP --> SP4[O: (4,0)]
-        SP --> SP5[S: (3,0)]
-        SP --> SP6[T: (3,0)]
-        SP --> SP7[Z: (3,0)]
-    end
+    %% Spawn Positions
+    Spawn[Spawn Points] --- ISpawn[I: (3,0)]
+    Spawn --- JSpawn[J: (3,0)]
+    Spawn --- LSpawn[L: (3,0)]
+    Spawn --- OSpawn[O: (4,0)]
+    Spawn --- SSpawn[S: (3,0)]
+    Spawn --- TSpawn[T: (3,0)]
+    Spawn --- ZSpawn[Z: (3,0)]
+
+    %% Style definitions
+    classDef piece fill:#f9f,stroke:#333,stroke-width:2px
+    classDef rotation fill:#bbf,stroke:#333,stroke-width:1px
+    classDef property fill:#bfb,stroke:#333,stroke-width:1px
+    classDef spawn fill:#fbb,stroke:#333,stroke-width:1px
+
+    %% Apply styles
+    class I,J,L,O,S,T,Z piece
+    class I1,I2,I3,I4,J1,J2,J3,J4,L1,L2,L3,L4,O1,O2,O3,O4,S1,S2,S3,S4,T1,T2,T3,T4,Z1,Z2,Z3,Z4 rotation
+    class Props,IProps,JProps,LProps,OProps,SProps,TProps,ZProps property
+    class Spawn,ISpawn,JSpawn,LSpawn,OSpawn,SSpawn,TSpawn,ZSpawn spawn
 ```
 
 ### Piece Statistics
@@ -250,8 +247,8 @@ java Tetris
 - Original Tetris Concept: Alexey Pajitnov
 - Java Swing Framework: Oracle Corporation
 
-## License
-This project is open source and available under the MIT License.
+
 
 ---
-*Created by Ioannis Morfidis* 
+## Author
+*Created by John Morfidis* 
